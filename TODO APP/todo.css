@@ -1,0 +1,45 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .addTask {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .addTask input {
+    flex: 1;
+    padding: 8px;
+  }
+  
+  .addTask button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .taskList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .taskItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .done {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .taskItem input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
