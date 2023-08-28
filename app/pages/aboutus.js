@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 const teamDetails = [
   { id: 1, name: 'Yash', role: 'Senior Developer' },
@@ -9,11 +8,6 @@ const teamDetails = [
 ];
 
 const AboutUsPage = () => {
-  const router = useRouter();
-  const { id } = router.query;
-
-  const teamMember = teamDetails.find(member => member.id === parseInt(id));
-
   return (
     <div>
       <h1>About Us Page</h1>
@@ -21,27 +15,16 @@ const AboutUsPage = () => {
         <a>Home</a>
       </Link>
       <br />
-      <Link href="/aboutus/1">
-        <a>Yash</a>
-      </Link>
-      <br />
-      <Link href="/aboutus/2">
-        <a>Vaibhav</a>
-      </Link>
-      <br />
-      <Link href="/aboutus/3">
-        <a>Suresh</a>
-      </Link>
-      <br />
-
-      {teamMember ? (
-        <div>
-          <h2>{teamMember.name}</h2>
-          <p>{teamMember.role}</p>
-        </div>
-      ) : (
-        <p>Developer doesn't exist</p>
-      )}
+      <h2>Developers</h2>
+      <ul>
+        {teamDetails.map(member => (
+          <li key={member.id}>
+            <Link href={`/aboutus/${member.id}`}>
+              <a>{member.name}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
