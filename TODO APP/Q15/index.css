@@ -1,0 +1,14 @@
+.completedTaskList {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+  }
+  
+  .completedTaskItem {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  
